@@ -1,7 +1,7 @@
-package com.minimum.depth.of.binary.tree;
+package com.fzj.leetcode;
 
 
-public class Solution {
+public class MinimumDepthOfBinaryTree {
 	public class TreeNode{
 		int val;
 		TreeNode left;
@@ -70,7 +70,7 @@ public class Solution {
 	}
 	
 	public static void main(String[] args) {
-		Solution solution = new Solution();
+		MinimumDepthOfBinaryTree solution = new MinimumDepthOfBinaryTree();
 		int[] A = {5,3,8,1,4,7,9};
 	//	int[] A = {1,2};
 		TreeNode node = null;
