@@ -5,7 +5,6 @@ import java.util.Stack;
 
 public class BinaryTree_PostorderTraversal {
 	
-
 	class TreeNode {
 		int val;
 		TreeNode left;
