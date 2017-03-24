@@ -49,15 +49,35 @@ public class PopulatingNextRightPointersInEachNode_II {
     		   next = queue.poll();
     		   cur.next = next;
     		   cur = next;
-    		   if(next.left!=null)
-    			   queue.offer(next.left);
-    		   if(next.right!=null)
-    			   queue.offer(next.right);
+    		   if(cur.left!=null)
+    			   queue.offer(cur.left);
+    		   if(cur.right!=null)
+    			   queue.offer(cur.right);
     	   }
     	   cur.next = null;
        }
        
     }
+    
+    public void connect2(TreeLinkNode root) {
+        while(root!=null){
+        	TreeLinkNode dummy = new TreeLinkNode(-1);
+        	TreeLinkNode pre = dummy;
+        	TreeLinkNode p = root;
+        	while(p!=null){
+        		if(p.left!=null){
+        			pre.next = p.left;
+        			pre = pre.next;
+        		}
+        		if(p.right!=null){
+        			pre.next = p.right;
+        			pre = pre.next;
+        		}
+        		p = p.next;
+        	}
+        	root = dummy.next;
+        }
+     }
     
     
     public static void main(String[] args) {
