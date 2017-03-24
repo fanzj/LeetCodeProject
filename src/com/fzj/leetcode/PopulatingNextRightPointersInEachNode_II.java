@@ -60,6 +60,7 @@ public class PopulatingNextRightPointersInEachNode_II {
     }
     
     public void connect2(TreeLinkNode root) {
+    	
         while(root!=null){
         	TreeLinkNode dummy = new TreeLinkNode(-1);
         	TreeLinkNode pre = dummy;
