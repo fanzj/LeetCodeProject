@@ -27,8 +27,6 @@ StringBuffer：是线程安全的，StringBuilder不是。从StringBuffer的源�
 	---------------------------
 9.HashTable 线程安全
 10.Vector 线程安全
-
-
 5.三次握手
 6.HTTP是哪个层的（常见的协议位于那个层）
 	应用层
@@ -38,7 +36,6 @@ StringBuffer：是线程安全的，StringBuilder不是。从StringBuffer的源�
 	Java BIO: 同步并阻塞，服务器实现模式为一个连接一个线程，即客户端有连接请求时服务器端就需要启动一个线程进行处理，如果这个连接不做任何事情会造成不必要的线程开销，当然可以通过线程池机制改善。
 	Java NIO: 同步非阻塞，服务器实现模式为一个请求一个线程，即客户端发送的连接请求都会注册到多路复用器上，多路复用器轮询到连接有I/O请求时才启动一个线程进行处理。
 http://blog.csdn.net/wanglei_storage/article/details/50225779
-
 10.4xx,3xx,5xx所具有的含义
 1XX类状态码信息表示：临时的响应。客户端在收到常规响应之前，应准备接收一个或多个1XX响应
 　　2XX类状态码信息表示：服务器成功的接收了客户端请求
@@ -48,7 +45,6 @@ http://blog.csdn.net/wanglei_storage/article/details/50225779
 11.Optional
 这是一个可以为null的容器对象。如果值存在则isPresent()方法会返回true，调用get()方法会返回该对象。
 12.CAS
-	
 13.ArrayList扩容
 	ArrayList list = new ArrayList();初始容量10，每次扩容为原来的1.5倍,加1，即int newCapacity = (oldCapacity * 3)/2 + 1;  
 14.B+树
