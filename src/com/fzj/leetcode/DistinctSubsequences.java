@@ -22,14 +22,14 @@ public class DistinctSubsequences {
 			}
 		}
 		
-		for(int i=0;i<row;i++){
+		/*for(int i=0;i<row;i++){
 			for(int j=0;j<col;j++){
 				System.out.print(dp[i][j]);
 				if(j<col-1)
 					System.out.print(" ");
 			}
 			System.out.println();
-		}
+		}*/
 		return dp[row-1][col-1];
 	}
 	
