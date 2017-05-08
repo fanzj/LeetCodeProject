@@ -35,6 +35,37 @@ public class ValidParentheses {
 		
 		return true;
 	}
+	
+	public boolean isValid2(String s) {
+		if(s=="")
+			return true;
+		HashMap<Character, Integer> map = new HashMap<>();
+		map.put('(', 0);
+		map.put('[', 1);
+		map.put('{', 2);
+		map.put(')', 3);
+		map.put(']', 4);
+		map.put('}', 5);
+		Stack<Character> stack = new Stack<>();
+		int pos = 0;
+		while(pos<s.length()){
+			if(map.get(s.charAt(pos))<3){
+				stack.push(s.charAt(pos));
+			}else {
+				if(!stack.isEmpty()){
+					char top = stack.peek();
+					if(map.get(s.charAt(pos))-map.get(top)!=3)
+						return false;
+					else
+						stack.pop();
+				}
+				else
+					return false;
+			}
+			pos++;
+		}
+		return stack.isEmpty();
+	}
 
 	public static void main(String[] args) {
 		String s = "(([]))[][]{}";//true
@@ -42,6 +73,6 @@ public class ValidParentheses {
 		String s3 = "()()";//true
 		String s4 = "((";//false
 		String s5 = ")}{({))[{{[}";//false
-		System.out.println(new ValidParentheses().isValid(s5));
+		System.out.println(new ValidParentheses().isValid2(s));
 	}
 }
